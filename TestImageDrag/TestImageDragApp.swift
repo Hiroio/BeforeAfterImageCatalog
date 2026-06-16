@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct TestImageDragApp: App {
+  @State private var navigatioManager = NavigationManager.shared
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView()
+				.environment(navigatioManager)
         }
     }
 }
